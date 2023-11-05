@@ -12,7 +12,7 @@ body
     width: 100%
     display: flex
     justify-content: space-between
-    padding: 2rem 4rem 0
+    padding: 2rem 4rem
 
     .mobile
         display: none
@@ -29,8 +29,13 @@ body
             display: flex
             gap: 4rem
 
-            li 
+            li:nth-child(-n+2)
+                display: flex
+                align-items: center
+
+            li
                 a,
+                p,
                 .menu-link
                     color: root.$secondary
                     font-size: 1.6rem
@@ -44,7 +49,7 @@ body
 
                 input[type="checkbox"]
                     width: 10px
-                    height: 10px
+                    height: 100%
                     appearance: none
                     content: ''
                     background: url('../assets/img/icon-arrow-down.svg') no-repeat center center
@@ -102,58 +107,68 @@ body
 
 .hero
     height: 100%
+    width: 1200px
+    max-width: 90%
     margin: 0 auto
     @include mixins.align-center
 
     .box
+        width: 100%
         display: flex
-        justify-content: center
+        justify-content: space-between
         align-items: flex-end
-        gap: 12.4rem
 
-    .info-hero
-        max-width: 54rem
-        display: flex
-        flex-direction: column
-        bottom: 0
-
-        h1
-            font-size: 8rem
-            font-weight: 700
-            line-height: 5.6rem
-            color: root.$primary
-            margin-bottom: 4.8rem
-
-        p
-            max-width: 44.5rem
-            font-size: 1.8rem
-            color: root.$secondary
-            line-height: 2.8rem
-            margin-bottom: 5rem
-
-        button
-            width: 16.4rem
-            height: 5.6rem
-            background: root.$primary
-            color: root.$light
-            font-size: 1.8rem
-            font-weight: 700
-            border-radius: 1.6rem
-            margin-bottom: 10.8rem
-            cursor: pointer
-            transition: .2s ease-in-out
-
-            &:hover
-                background: root.$color-one
-                color: root.$primary
-
-        .partners
-            width: 100%
+        .info-hero
+            width: 54rem
             display: flex
-            justify-content: space-between
+            flex-direction: column
+            margin-right: 3.2rem
 
-            img
-                object-fit: contain
+            h1
+                font-size: 8rem
+                font-weight: 700
+                line-height: 5.6rem
+                color: root.$primary
+                margin-bottom: 4.8rem
+                @include mixins.medium-viewer
+                    font-size: 7.2rem
 
-    .img-hero
-        max-width: 48rem
+            p
+                max-width: 44.5rem
+                font-size: 1.8rem
+                color: root.$secondary
+                line-height: 2.8rem
+                margin-bottom: 5rem
+                @include mixins.medium-viewer
+                    margin-bottom: 3.2rem
+
+            button
+                width: 16.4rem
+                height: 5.6rem
+                background: root.$primary
+                color: root.$light
+                font-size: 1.8rem
+                font-weight: 700
+                border-radius: 1.6rem
+                margin-bottom: 10.8rem
+                cursor: pointer
+                transition: .2s ease-in-out
+                @include mixins.medium-viewer
+                    margin-bottom: 4.8rem
+
+                &:hover
+                    background: root.$color-one
+                    color: root.$primary
+
+            .partners
+                width: 100%
+                display: flex
+                justify-content: space-between
+
+                img
+                    object-fit: contain
+
+        .img-hero
+            max-width: 48rem
+            @include mixins.medium-viewer
+                width: 38rem

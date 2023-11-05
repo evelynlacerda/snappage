@@ -10,7 +10,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 4rem 0;
+  padding: 2rem 4rem;
 }
 .header .mobile {
   display: none;
@@ -28,13 +28,19 @@ body {
   display: flex;
   gap: 4rem;
 }
+.header .links nav ul li:nth-child(-n+2) {
+  display: flex;
+  align-items: center;
+}
 .header .links nav ul li a,
+.header .links nav ul li p,
 .header .links nav ul li .menu-link {
   color: #686868;
   font-size: 1.6rem;
   transition: 0.2s ease-in-out;
 }
 .header .links nav ul li a:hover,
+.header .links nav ul li p:hover,
 .header .links nav ul li .menu-link:hover {
   color: #000000;
 }
@@ -43,7 +49,7 @@ body {
 }
 .header .links nav ul li input[type=checkbox] {
   width: 10px;
-  height: 10px;
+  height: 100%;
   appearance: none;
   content: "";
   background: url("../assets/img/icon-arrow-down.svg") no-repeat center center;
@@ -103,37 +109,49 @@ body {
 
 .hero {
   height: 100%;
+  width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
 .hero .box {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
-  gap: 12.4rem;
 }
-.hero .info-hero {
-  max-width: 54rem;
+.hero .box .info-hero {
+  width: 54rem;
   display: flex;
   flex-direction: column;
-  bottom: 0;
+  margin-right: 3.2rem;
 }
-.hero .info-hero h1 {
+.hero .box .info-hero h1 {
   font-size: 8rem;
   font-weight: 700;
   line-height: 5.6rem;
   color: #000000;
   margin-bottom: 4.8rem;
 }
-.hero .info-hero p {
+@media (min-width: 992px) and (max-width: 1280px) {
+  .hero .box .info-hero h1 {
+    font-size: 7.2rem;
+  }
+}
+.hero .box .info-hero p {
   max-width: 44.5rem;
   font-size: 1.8rem;
   color: #686868;
   line-height: 2.8rem;
   margin-bottom: 5rem;
 }
-.hero .info-hero button {
+@media (min-width: 992px) and (max-width: 1280px) {
+  .hero .box .info-hero p {
+    margin-bottom: 3.2rem;
+  }
+}
+.hero .box .info-hero button {
   width: 16.4rem;
   height: 5.6rem;
   background: #000000;
@@ -145,20 +163,30 @@ body {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-.hero .info-hero button:hover {
+@media (min-width: 992px) and (max-width: 1280px) {
+  .hero .box .info-hero button {
+    margin-bottom: 4.8rem;
+  }
+}
+.hero .box .info-hero button:hover {
   background: #e0ca2c;
   color: #000000;
 }
-.hero .info-hero .partners {
+.hero .box .info-hero .partners {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.hero .info-hero .partners img {
+.hero .box .info-hero .partners img {
   object-fit: contain;
 }
-.hero .img-hero {
+.hero .box .img-hero {
   max-width: 48rem;
+}
+@media (min-width: 992px) and (max-width: 1280px) {
+  .hero .box .img-hero {
+    width: 38rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
