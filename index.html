@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,60 @@
 
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
+
 <body>
     <header class="header">
         <div class="links">
-            <img src="./src/assets/img/logo.svg" alt="Snap">
             <div class="mobile">
                 <img src="./src/assets/img/icon-menu.svg" alt="Menu">
             </div>
+            <img src="./src/assets/img/logo.svg" alt="Snap" class="logo-img">
             <nav class="menu">
                 <ul>
                     <li>
-                        <a href="/">Features</a>
-                        <img src="./src/assets/img/icon-arrow-down.svg" class="arrow">
+                        <a href="/" class="menu-link">Features</a>
+                        <input type="checkbox" name="arrow" id="arrowFeature" class="arrow-drop">
+                        <div id="dropFeature" class="drop-feature animate__animated">
+                            <a href="/">
+                                <img src="./src/assets/img/icon-todo.svg" alt="icon-todo" class="drop-icon">
+                                Todo List
+                            </a>
+                            <a href="/">
+                                <img src="./src/assets/img/icon-calendar.svg" alt="icon-calendar" class="drop-icon">
+                                Calendar
+                            </a>
+                            <a href="/">
+                                <img src="./src/assets/img/icon-reminders.svg" alt="icon-reminders" class="drop-icon">
+                                Reminders
+                            </a>
+                            <a href="/"><img src="./src/assets/img/icon-planning.svg" alt="icon-planning"
+                                    class="drop-icon">
+                                Planning
+                            </a>
+                        </div>
                     </li>
                     <li>
-                        <a href="/">Company</a>
-                        <img src="./src/assets/img/icon-arrow-down.svg" class="arrow">
+                        <a href="/" class="menu-link">Company</a>
+                        <input type="checkbox" name="arrow" id="arrowCompany" class="arrow-drop">
+                        <div id="dropCompany" class="drop-company animate__animated">
+                            <a href="/">History</a>
+                            <a href="/">Our Team</a>
+                            <a href="/">Blog</a>
+                        </div>
                     </li>
                     <li>
-                        <a href="/">Careers</a>
+                        <a href="/" class="menu-link">Careers</a>
                     </li>
                     <li>
-                        <a href="/">About</a>
+                        <a href="/" class="menu-link">About</a>
                     </li>
                 </ul>
             </nav>
@@ -40,20 +72,24 @@
         </div>
     </header>
     <main class="hero">
-        <div class="info-hero">
-            <h1 class="title">Make remote work</h1>
-            <p class="text">Get yout team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-            <button class="more-btn">Learn more</button>
-            <div class="partners">
-                <img src="./src/assets/img/client-databiz.svg" alt="Data Biz">
-                <img src="./src/assets/img/client-audiophile.svg" alt="Audio Phile">
-                <img src="./src/assets/img/client-meet.svg" alt="Meet">
-                <img src="./src/assets/img/client-maker.svg" alt="Maker">
+        <div class="box">
+            <div class="info-hero">
+                <h1 class="title">Make remote work</h1>
+                <p class="text">Get yout team in sync, no matter your location. Streamline processes, create team
+                    rituals,
+                    and watch productivity soar.</p>
+                <button class="more-btn">Learn more</button>
+                <div class="partners">
+                    <img src="./src/assets/img/client-databiz.svg" alt="Data Biz">
+                    <img src="./src/assets/img/client-audiophile.svg" alt="Audio Phile">
+                    <img src="./src/assets/img/client-meet.svg" alt="Meet">
+                    <img src="./src/assets/img/client-maker.svg" alt="Maker">
+                </div>
             </div>
-        </div>
-        <div class="img-hero">
-            <img src="./src/assets/img/image-hero-desktop.png" alt="">
+            <img src="./src/assets/img/image-hero-desktop.png" alt="hero-img" class="img-hero">
         </div>
     </main>
+    <script src="./src/js/script.js"></script>
 </body>
+
 </html>
