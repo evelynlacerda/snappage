@@ -1,0 +1,164 @@
+body {
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem 0;
+}
+.header .mobile {
+  display: none;
+}
+.header .links {
+  display: flex;
+  align-items: center;
+  gap: 6.4rem;
+}
+.header .links .logo-img {
+  width: auto;
+  height: 3.5rem;
+}
+.header .links nav ul {
+  display: flex;
+  gap: 4rem;
+}
+.header .links nav ul li a,
+.header .links nav ul li .menu-link {
+  color: #686868;
+  font-size: 1.6rem;
+  transition: 0.2s ease-in-out;
+}
+.header .links nav ul li a:hover,
+.header .links nav ul li .menu-link:hover {
+  color: #000000;
+}
+.header .links nav ul li .menu-link:nth-child(-n+2) {
+  margin-right: 0.6rem;
+}
+.header .links nav ul li input[type=checkbox] {
+  width: 10px;
+  height: 10px;
+  appearance: none;
+  content: "";
+  background: url("../assets/img/icon-arrow-down.svg") no-repeat center center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.header .links nav ul li input:checked[type=checkbox] {
+  content: "";
+  background: url("../assets/img/icon-arrow-up.svg") no-repeat center center;
+  transition: 0.2s ease-in-out;
+}
+.header .links nav ul li .drop-feature,
+.header .links nav ul li .drop-company {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.4rem;
+  background: #ffffff;
+  border-radius: 1.6rem;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+}
+.header .links nav ul li .drop-feature {
+  top: 7rem;
+  left: 15.5rem;
+}
+.header .links nav ul li .drop-company {
+  top: 7rem;
+  left: 34rem;
+}
+.header .links nav ul li .drop-company .drop-icon {
+  margin-right: 1.2rem;
+}
+.header .links nav ul li .drop-show {
+  display: flex;
+}
+.header .user {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.header .user a {
+  color: #686868;
+  font-size: 1.6rem;
+}
+.header .user .register-btn {
+  padding: 1.2rem 2.2rem;
+  border: 2px solid #686868;
+  border-radius: 1.4rem;
+  transition: 0.2s ease-in-out;
+}
+.header .user .register-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+}
+
+.hero {
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.hero .box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12.4rem;
+}
+.hero .info-hero {
+  max-width: 54rem;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+.hero .info-hero h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  color: #000000;
+  margin-bottom: 4.8rem;
+}
+.hero .info-hero p {
+  max-width: 44.5rem;
+  font-size: 1.8rem;
+  color: #686868;
+  line-height: 2.8rem;
+  margin-bottom: 5rem;
+}
+.hero .info-hero button {
+  width: 16.4rem;
+  height: 5.6rem;
+  background: #000000;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 1.6rem;
+  margin-bottom: 10.8rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.hero .info-hero button:hover {
+  background: #e0ca2c;
+  color: #000000;
+}
+.hero .info-hero .partners {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hero .info-hero .partners img {
+  object-fit: contain;
+}
+.hero .img-hero {
+  max-width: 48rem;
+}
+
+/*# sourceMappingURL=style.css.map */
