@@ -20,55 +20,60 @@
 <body>
     <header class="header">
         <div class="links">
-            <div class="mobile">
-                <img src="./src/assets/img/icon-menu.svg" alt="Menu">
-            </div>
             <img src="./src/assets/img/logo.svg" alt="Snap" class="logo-img">
-            <nav class="menu">
-                <ul>
-                    <li>
-                        <p class="menu-link">Features</p>
-                        <input type="checkbox" name="arrow" id="arrowFeature" class="arrow-drop">
-                        <div id="dropFeature" class="drop-feature animate__animated">
-                            <a href="/">
-                                <img src="./src/assets/img/icon-todo.svg" alt="icon-todo" class="drop-icon">
-                                Todo List
-                            </a>
-                            <a href="/">
-                                <img src="./src/assets/img/icon-calendar.svg" alt="icon-calendar" class="drop-icon">
-                                Calendar
-                            </a>
-                            <a href="/">
-                                <img src="./src/assets/img/icon-reminders.svg" alt="icon-reminders" class="drop-icon">
-                                Reminders
-                            </a>
-                            <a href="/"><img src="./src/assets/img/icon-planning.svg" alt="icon-planning"
-                                    class="drop-icon">
-                                Planning
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="menu-link">Company</p>
-                        <input type="checkbox" name="arrow" id="arrowCompany" class="arrow-drop">
-                        <div id="dropCompany" class="drop-company animate__animated">
-                            <a href="/">History</a>
-                            <a href="/">Our Team</a>
-                            <a href="/">Blog</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="/" class="menu-link">Careers</a>
-                    </li>
-                    <li>
-                        <a href="/" class="menu-link">About</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="user">
-            <a href="/" class="login-btn">Login</a>
-            <a href="/" class="register-btn">Register</a>
+            <input type="checkbox" name="menu-mobile" id="menu-mobile" class="mobile-menu">
+            <div class="box-menu">
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <div class="box-drop">
+                                <p class="menu-link">Features</p>
+                                <input type="checkbox" name="arrow" id="arrowFeature" class="arrow-drop">
+                            </div>
+                            <div id="dropFeature" class="drop-feature animate__animated">
+                                <a href="/">
+                                    <img src="./src/assets/img/icon-todo.svg" alt="icon-todo" class="drop-icon">
+                                    Todo List
+                                </a>
+                                <a href="/">
+                                    <img src="./src/assets/img/icon-calendar.svg" alt="icon-calendar" class="drop-icon">
+                                    Calendar
+                                </a>
+                                <a href="/">
+                                    <img src="./src/assets/img/icon-reminders.svg" alt="icon-reminders"
+                                        class="drop-icon">
+                                    Reminders
+                                </a>
+                                <a href="/"><img src="./src/assets/img/icon-planning.svg" alt="icon-planning"
+                                        class="drop-icon">
+                                    Planning
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box-drop">
+                                <p class="menu-link">Company</p>
+                                <input type="checkbox" name="arrow" id="arrowCompany" class="arrow-drop">
+                            </div>
+                            <div id="dropCompany" class="drop-company animate__animated">
+                                <a href="/">History</a>
+                                <a href="/">Our Team</a>
+                                <a href="/">Blog</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/" class="menu-link">Careers</a>
+                        </li>
+                        <li>
+                            <a href="/" class="menu-link">About</a>
+                        </li>
+                    </ul>
+                    <div class="user">
+                        <a href="/" class="login-btn">Login</a>
+                        <a href="/" class="register-btn">Register</a>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
     <main class="hero">
