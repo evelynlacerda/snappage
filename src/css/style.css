@@ -8,29 +8,116 @@ body {
 
 .header {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 4rem;
 }
-.header .mobile {
-  display: none;
+@media (max-width: 991.99px) {
+  .header {
+    position: relative;
+    z-index: 999;
+  }
 }
 .header .links {
+  width: 100%;
+  padding: 1.6rem 4rem;
+  background: #ffffff;
   display: flex;
   align-items: center;
   gap: 6.4rem;
 }
+@media (max-width: 991.99px) {
+  .header .links {
+    position: fixed;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+  }
+}
 .header .links .logo-img {
-  width: auto;
-  height: 3.5rem;
+  width: fit-content;
+  height: 4.4rem;
+  padding: 0.4rem 0;
+}
+@media (max-width: 991.99px) {
+  .header .links .logo-img {
+    height: 3.5rem;
+  }
+}
+.header .links .mobile-menu {
+  display: none;
+  appearance: none;
+  content: url("../assets/img/icon-menu.svg");
+  position: absolute;
+  right: 2rem;
+  transition: 1s ease-in-out;
+}
+@media (max-width: 991.99px) {
+  .header .links .mobile-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+  }
+}
+.header .links .mobile-menu:checked {
+  content: url("../assets/img/icon-close-menu.svg");
+}
+.header .links .box-menu {
+  width: 100%;
+}
+@media (max-width: 991.99px) {
+  .header .links .box-menu {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+.header .links nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 991.99px) {
+  .header .links nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    width: 24rem;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 0 3.2rem 3.2rem;
+    overflow: scroll;
+  }
 }
 .header .links nav ul {
   display: flex;
   gap: 4rem;
 }
+@media (max-width: 991.99px) {
+  .header .links nav ul {
+    flex-direction: column;
+    margin-top: 8rem;
+    gap: 2.4rem;
+  }
+}
 .header .links nav ul li:nth-child(-n+2) {
   display: flex;
   align-items: center;
+}
+@media (max-width: 991.99px) {
+  .header .links nav ul li:nth-child(-n+2) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.header .links nav ul li .box-drop {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 .header .links nav ul li a,
 .header .links nav ul li p,
@@ -72,36 +159,59 @@ body {
   border-radius: 1.6rem;
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
 }
+@media (max-width: 991.99px) {
+  .header .links nav ul li .drop-feature,
+  .header .links nav ul li .drop-company {
+    position: static;
+    display: none;
+    background: none;
+    box-shadow: none;
+    padding: 1.6rem 0.8rem;
+  }
+}
 .header .links nav ul li .drop-feature {
   top: 7rem;
-  left: 15.5rem;
+  left: 14rem;
+}
+.header .links nav ul li .drop-feature .drop-icon {
+  margin-right: 1.2rem;
 }
 .header .links nav ul li .drop-company {
   top: 7rem;
   left: 34rem;
 }
-.header .links nav ul li .drop-company .drop-icon {
-  margin-right: 1.2rem;
-}
 .header .links nav ul li .drop-show {
   display: flex;
 }
-.header .user {
+.header .links nav .user {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
-.header .user a {
+@media (max-width: 991.99px) {
+  .header .links nav .user {
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  }
+}
+.header .links nav .user a {
   color: #686868;
   font-size: 1.6rem;
 }
-.header .user .register-btn {
+.header .links nav .user .register-btn {
   padding: 1.2rem 2.2rem;
   border: 2px solid #686868;
   border-radius: 1.4rem;
   transition: 0.2s ease-in-out;
 }
-.header .user .register-btn:hover {
+@media (max-width: 991.99px) {
+  .header .links nav .user .register-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+.header .links nav .user .register-btn:hover {
   background: #000000;
   color: #ffffff;
   border: 2px solid #000000;
@@ -115,17 +225,42 @@ body {
   display: flex;
   align-items: center;
 }
+@media (min-width: 992px) and (max-width: 1280px) {
+  .hero {
+    width: 1000px;
+  }
+}
+@media (max-width: 489.99px) {
+  .hero {
+    height: auto;
+  }
+}
 .hero .box {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
+@media (max-width: 991.99px) {
+  .hero .box {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0 0 2.4rem;
+    margin: 7.2rem 0 0;
+  }
+}
 .hero .box .info-hero {
   width: 54rem;
   display: flex;
   flex-direction: column;
   margin-right: 3.2rem;
+}
+@media (max-width: 991.99px) {
+  .hero .box .info-hero {
+    width: 100%;
+    align-items: center;
+    margin: 0;
+  }
 }
 .hero .box .info-hero h1 {
   font-size: 8rem;
@@ -136,7 +271,19 @@ body {
 }
 @media (min-width: 992px) and (max-width: 1280px) {
   .hero .box .info-hero h1 {
+    width: 48rem;
     font-size: 7.2rem;
+  }
+}
+@media (max-width: 991.99px) {
+  .hero .box .info-hero h1 {
+    font-size: 6rem;
+    text-align: center;
+  }
+}
+@media (max-width: 489.99px) {
+  .hero .box .info-hero h1 {
+    font-size: 4.8rem;
   }
 }
 .hero .box .info-hero p {
@@ -149,6 +296,12 @@ body {
 @media (min-width: 992px) and (max-width: 1280px) {
   .hero .box .info-hero p {
     margin-bottom: 3.2rem;
+  }
+}
+@media (max-width: 991.99px) {
+  .hero .box .info-hero p {
+    max-width: 100%;
+    text-align: center;
   }
 }
 .hero .box .info-hero button {
@@ -168,6 +321,11 @@ body {
     margin-bottom: 4.8rem;
   }
 }
+@media (max-width: 991.99px) {
+  .hero .box .info-hero button {
+    margin-bottom: 8rem;
+  }
+}
 .hero .box .info-hero button:hover {
   background: #e0ca2c;
   color: #000000;
@@ -177,8 +335,19 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 489.99px) {
+  .hero .box .info-hero .partners {
+    justify-content: space-around;
+  }
+}
 .hero .box .info-hero .partners img {
   object-fit: contain;
+}
+@media (max-width: 489.99px) {
+  .hero .box .info-hero .partners img {
+    max-width: 7.2rem;
+    object-fit: contain;
+  }
 }
 .hero .box .img-hero {
   max-width: 48rem;
@@ -186,6 +355,12 @@ body {
 @media (min-width: 992px) and (max-width: 1280px) {
   .hero .box .img-hero {
     width: 38rem;
+  }
+}
+@media (max-width: 991.99px) {
+  .hero .box .img-hero {
+    width: 100vw;
+    margin-bottom: 6.4rem;
   }
 }
 
